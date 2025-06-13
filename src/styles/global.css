@@ -1,12 +1,17 @@
 @import "tailwindcss";
 
+body {background-color: black;}
+
 .card {
+    animation: float 3s ease-in-out infinite;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .card:hover {
+    animation: none; /* Interrompe a flutuação */
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  
   }
 
   @keyframes float {
@@ -16,15 +21,4 @@
     50% {
       transform: translateY(-10px);
     }
-  }
-  
-  .card {
-    animation: float 3s ease-in-out infinite;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    animation: none; /* Interrompe a flutuação */
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   }
